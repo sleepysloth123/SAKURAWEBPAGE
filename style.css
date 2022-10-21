@@ -1,0 +1,134 @@
+:root {
+    --black: #000000;
+    --lightBlack: #1E1E1E;
+    --darkGrey: #48504F;
+    --mediumGrey: #8E8E8E;
+    --lightGrey: #E0E0E0;
+
+    --blueAccent: #63ABAF;
+
+    --white: #FFFF;
+    --lightYellow: #EDDDD4;
+
+    --backgroundColor: #FFFF;
+
+
+    --categoryHoverColor: green;
+    --buttonHoverColor: red;
+}
+
+/*
+RESET SETTINGS */
+
+/* set border-box (so that css uses a
+more reasonable box model, and so it’s
+like every other platform) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+/* get rid of default margins which
+vary depending on browser anyway, just
+set it yourself later*/
+* {
+    margin: 0;
+}
+
+    /* media elements are replaced elements
+which have a width based on the media,
+so we prevent it from expanding beyond
+its container, and take up a row */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* make tables look like spreadsheets
+and less like a spaced-out grid */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+    display: block;
+}
+
+.container{
+    /* position: relative; */
+    
+    margin-top: 30px;
+    background-color: lightblue;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 90px 1fr 100px;
+
+    overflow: auto;
+}
+
+
+    
+.navbar {
+    
+    background-color:var(--lightBlack);
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+
+    
+    /* position: sticky;
+    z-index: 999; */
+    -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+}
+
+.menubar{
+    background-color: red;
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+
+.pathfinderbar{
+    background-color: blue;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.maincontent{
+    background-color: green;
+    grid-column: 2;
+    grid-row: 2;
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 383px 383px 383px; */
+}
+
+.menuitem{
+    background: pink;
+    width: 250px;
+    height: 383px;
+    padding: 20px;
+
+}
+
+.footer{
+    background-color: var(--lightBlack);
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+
+
+
